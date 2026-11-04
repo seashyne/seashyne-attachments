@@ -263,6 +263,11 @@ h1 { margin: 0 0 1rem; font-size: clamp(3.4rem, 7vw, 5.4rem); font-weight: 600; 
 .link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
 .link-grid a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-width: 0; padding: 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 0.96rem; font-weight: 500; transition: background-color 160ms ease; }
 .link-grid a:hover { background: #17232f; }
+.link-name { display: inline-flex; align-items: center; gap: 0.72rem; min-width: 0; }
+.link-icon { flex: 0 0 auto; width: 23px; height: 23px; object-fit: contain; }
+.lenout-link-icon { width: 27px; height: 27px; }
+.x-link-icon { width: 19px; height: 19px; }
+.orcid-link-icon { width: 24px; height: 24px; }
 .link-handle { min-width: 0; overflow: hidden; color: var(--muted); font-size: 0.77rem; font-weight: 400; text-overflow: ellipsis; white-space: nowrap; }
 
 .contact-panel { display: grid; place-items: center; padding: 40px clamp(30px, 6vw, 66px); }
