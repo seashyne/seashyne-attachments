@@ -78,7 +78,7 @@ body::after {
   background-image: url("./assets/sea-fish.png");
   background-position: 18px 16px;
   background-repeat: repeat;
-  background-size: 104px 104px;
+  background-size: 64px 64px;
   content: "";
   filter: brightness(1.3) saturate(0.7);
   opacity: 0.05;
