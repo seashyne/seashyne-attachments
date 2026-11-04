@@ -1,7 +1,7 @@
 <div align="center">
   <!-- เปลี่ยนรูปหน้าปกโดยแทนที่ไฟล์ assets/cover.png ใน seashyne-attachments -->
   <img src="https://raw.githubusercontent.com/seashyne/seashyne-attachments/main/assets/cover.png" width="180" alt="seashyne cover" />
-  <h1>Hi, I'm sea — seashyne</h1>
+  <h1><img src="https://raw.githubusercontent.com/seashyne/seashyne-attachments/main/assets/sea-fish.png" width="42" height="42" alt="" /> Hi, I'm sea — seashyne</h1>
   <p>สวัสดี ผม sea นักพัฒนาที่ชอบสร้างเครื่องมือ ภาษาโปรแกรม และระบบเรนเดอร์</p>
   <p>TH | EN | 中文 | 日本語</p>
 </div>

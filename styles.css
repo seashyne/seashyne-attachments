@@ -116,14 +116,10 @@ button, select { font: inherit; }
 }
 
 .brand-mark {
-  width: 30px;
-  height: 30px;
-  stroke: var(--sea);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2;
+  width: 38px;
+  height: 32px;
+  object-fit: contain;
 }
-.brand-mark .brand-sun { stroke: var(--sun); }
 
 .header-tools { display: flex; align-items: center; gap: 0.9rem; }
 .nav-list { display: flex; align-items: center; gap: 0.2rem; margin: 0; padding: 0; list-style: none; }
@@ -259,7 +255,7 @@ h1 { margin: 0 0 1rem; font-size: clamp(3.4rem, 7vw, 5.4rem); font-weight: 600; 
   transition: border-color 160ms ease, background-color 160ms ease;
 }
 .lenout-feature:hover { border-color: #52768b; }
-.lenout-symbol { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 20px; background: var(--sea); color: #0b1820; font-size: 2.5rem; font-weight: 600; }
+.lenout-symbol { width: 82px; height: 82px; object-fit: contain; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)); }
 .lenout-copy h3 { margin: 0 0 0.45rem; font-size: 1.35rem; font-weight: 600; }
 .lenout-copy p { max-width: 39rem; margin: 0; color: var(--muted); font-size: 0.9rem; }
 .feature-action { align-self: end; padding-bottom: 0.15rem; border-bottom: 1px solid #52768b; color: var(--sea-strong); font-size: 0.8rem; white-space: nowrap; }
@@ -303,7 +299,7 @@ h1 { margin: 0 0 1rem; font-size: clamp(3.4rem, 7vw, 5.4rem); font-weight: 600; 
   .site-card { height: calc(100dvh - 16px); border-radius: 16px; }
   .site-header { min-height: 112px; padding: 12px 14px; }
   .brand { font-size: 1.05rem; }
-  .brand-mark { width: 27px; height: 27px; }
+  .brand-mark { width: 34px; height: 28px; }
   .header-tools { gap: 0.45rem; }
   .nav-list { gap: 0; }
   .nav-link { padding: 0.42rem 0.5rem; font-size: 0.76rem; }
@@ -329,7 +325,7 @@ h1 { margin: 0 0 1rem; font-size: clamp(3.4rem, 7vw, 5.4rem); font-weight: 600; 
   .panel-heading h2, .contact-content h2 { font-size: 2rem; }
   .panel-heading p { font-size: 0.85rem; }
   .lenout-feature { grid-template-columns: 1fr; gap: 1rem; padding: 1.4rem; }
-  .lenout-symbol { width: 56px; height: 56px; border-radius: 15px; font-size: 1.8rem; }
+  .lenout-symbol { width: 62px; height: 62px; }
   .feature-action { grid-column: 1; }
   .link-grid { grid-template-columns: 1fr; }
   .link-grid a { padding: 1rem 1.1rem; }
