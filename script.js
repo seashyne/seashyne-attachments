@@ -1,10 +1,13 @@
-const languageSelect = document.querySelector("#language-select");
+const languagePicker = document.querySelector("#language-picker");
+const languageSummary = document.querySelector("#current-language");
+const languageButtons = [...document.querySelectorAll("[data-language]")];
 const translatableElements = document.querySelectorAll("[data-th][data-en][data-zh][data-ja]");
 const pageLinks = [...document.querySelectorAll(".page-link")];
 const navLinks = [...document.querySelectorAll(".nav-link")];
 const panels = [...document.querySelectorAll(".page-panel")];
 const supportedLanguages = ["th", "en", "zh", "ja"];
 const htmlLanguages = { th: "th", en: "en", zh: "zh-Hans", ja: "ja" };
+const languageCodes = { th: "TH", en: "EN", zh: "ZH", ja: "JA" };
 const pageIds = panels.map((panel) => panel.id);
 
 let language = "th";
@@ -21,7 +24,11 @@ function setLanguage(nextLanguage) {
 
   language = nextLanguage;
   document.documentElement.lang = htmlLanguages[language];
-  languageSelect.value = language;
+  languageSummary.textContent = languageCodes[language];
+
+  languageButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.language === language));
+  });
 
   translatableElements.forEach((element) => {
     element.textContent = element.dataset[language];
@@ -52,8 +59,22 @@ function showPage(pageId) {
   });
 }
 
-languageSelect.addEventListener("change", (event) => {
-  setLanguage(event.target.value);
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.language);
+    languagePicker.open = false;
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!languagePicker.contains(event.target)) languagePicker.open = false;
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && languagePicker.open) {
+    languagePicker.open = false;
+    languagePicker.querySelector("summary").focus();
+  }
 });
 
 pageLinks.forEach((link) => {

@@ -38,12 +38,18 @@
                 <li><a class="nav-link page-link" href="#contact" data-th="ติดต่อ" data-en="Contact" data-zh="联系" data-ja="連絡">ติดต่อ</a></li>
               </ul>
             </nav>
-            <select class="language-select" id="language-select" aria-label="Language / ภาษา" title="Choose language / เลือกภาษา">
-              <option value="th">TH</option>
-              <option value="en">EN</option>
-              <option value="zh">中文</option>
-              <option value="ja">日本語</option>
-            </select>
+            <details class="language-picker" id="language-picker">
+              <summary aria-label="Choose language / เลือกภาษา">
+                <span id="current-language">TH</span>
+                <svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="m1 1.5 5 5 5-5" /></svg>
+              </summary>
+              <div class="language-options" aria-label="Language / ภาษา">
+                <button type="button" data-language="th" aria-pressed="true"><span>ไทย</span><span>TH</span></button>
+                <button type="button" data-language="en" aria-pressed="false"><span>English</span><span>EN</span></button>
+                <button type="button" data-language="zh" aria-pressed="false"><span>中文</span><span>ZH</span></button>
+                <button type="button" data-language="ja" aria-pressed="false"><span>日本語</span><span>JA</span></button>
+              </div>
+            </details>
           </div>
         </header>
 
